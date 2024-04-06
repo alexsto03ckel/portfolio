@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Page Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
+
+    
+    <style>
+        .header {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        transition: background-color 0.5s ease, top 0.5s ease; /* Combine las transiciones en una sola línea */
+        }
+        .header.active {
+            top: 0;
+        }
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Ensure the video is behind other content */
+            object-fit: cover; /* Cover the entire viewport */
+        }
+    </style>
+</head>
+<body>
+
+<video autoplay muted loop id="video-background">
+        <source src="images/0405.mp4" type="video/mp4">
+</video>    
+
+<div class="header">
+    <nav>
+        <img src="logo.webp" class="logo">
+        <ul class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+            <li><a href="#portfolio">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+</div>
+<section id="portfolio">
+    <div class="wrapper">
+        <div class= "text-box1">
+            <h1>Portfolio Website</h1>
+            <p> Making website is now one of the easiest thing in the world, you just neet to learn HTML, CSS <br> and JavaScript and you are good to go</p>
+            <a href="" class="hero-btn">Visit us to Know More</a>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container reveal">
+        <div class="service">
+            <h1>About Us<span></span></h1>
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="logo.webp" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3 class="name">Fabrizio Caceres</h3>
+                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea omnis soluta aliquid voluptatem laborum nobis ullam assumenda quo laboriosam, magnam velit eveniet. Aspernatur suscipit velit molestias dolore ducimus nemo rem.</p>
+
+                            <ul>
+                                <li id="read-more-btn5" class="button">Read More</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="logo.webp" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3 class="name">Alexis Colman</h3>
+                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea omnis soluta aliquid voluptatem laborum nobis ullam assumenda quo laboriosam, magnam velit eveniet. Aspernatur suscipit velit molestias dolore ducimus nemo rem.</p>
+
+                            <ul>
+                                <li id="read-more-btn4" class="button">Read More</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="logo.webp" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3 class="name">Alex Stockel</h3>
+                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea omnis soluta aliquid voluptatem laborum nobis ullam assumenda quo laboriosam, magnam velit eveniet. Aspernatur suscipit velit molestias dolore ducimus nemo rem.</p>
+                            <ul>
+                                <li id="read-more-btn" class="button">Read More</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="logo.webp" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3 class="name">Tomas Gonzalez</h3>
+                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea omnis soluta aliquid voluptatem laborum nobis ullam assumenda quo laboriosam, magnam velit eveniet. Aspernatur suscipit velit molestias dolore ducimus nemo rem.</p>
+
+                            <ul>
+                                <li id="read-more-btn3" class="button">Read More</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="logo.webp" alt="" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h3 class="name">Facundo Villalba</h3>
+                            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea omnis soluta aliquid voluptatem laborum nobis ullam assumenda quo laboriosam, magnam velit eveniet. Aspernatur suscipit velit molestias dolore ducimus nemo rem.</p>
+                            <ul>
+                                <li id="read-more-btn2" class="button">Read More</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+<section id="services">
+    <div class="container">
+        <div class="wrapper">
+            <div class="service">
+                <h1>Our Services<span></span></h1>
+                <div class="cards2">
+                    <div class="card2">
+                        <i class="fa-brands fa-chromecast"></i>
+                        <h2>Networking</h2>
+                        <p>Connect and optimize your digital infrastructure with our expert networking solutions.<br>
+                            Members who can provide those services: <br>
+                            <a href="CV_AlexisColman.pdf" target="_blank">Alexis Colman</a><br>
+                            <a href="CV_Alex.pdf" target="_blank">Alex Stockel</a>
+                        </p>
+                    </div>       
+                    <div class="card2">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <h2>Database</h2>
+                        <p> Store, manage, and access your data efficiently with our robust database solutions.<br>
+                            Members who can provide those services: <br>
+                            <a href="CV_AlexisColman.pdf" target="_blank">Alexis Colman</a><br>
+                            <a href="CV_Facundo.pdf" target="_blank">Facundo Villalba</a>
+                        </p>
+                    </div>
+                    <div class="card2">
+                        <i class="fa-solid fa-user-group"></i>
+                        <h2>AI</h2>
+                        <p>Leverage the power of artificial intelligence to automate processes and gain valuable insights.<br>
+                            Members who can provide those services: <br>
+                            <a href="CV_Fabrizio.pdf" target="_blank">Fabrizio Caceres</a><br>
+                            <a href="CV_Alex.pdf" target="_blank">Alex Stockel</a>
+                        </p>
+                    </div>
+                    <div class="card2">
+                        <i class="fa-solid fa-desktop"></i>
+                        <h2>Web Development</h2>
+                        <p>Build stunning and responsive websites tailored to your needs with our web development expertise.<br>
+                            Members who can provide those services: <br>
+                            <a href="CV_Facundo.pdf" target="_blank">Facundo Villalba</a><br>
+                            <a href="CV_Fabrizio.pdf" target="_blank">Fabrizio Caceres</a><br>
+                        </p>
+                    </div>
+                    <div class="card2">
+                        <i class="fa-solid fa-camera"></i>
+                        <h2>Graphic Design</h2>
+                        <p>Capture attention and communicate effectively with visually appealing graphic design solutions.<br>
+                            Members who can provide those services: <br>
+                            <a href="CV_Tomas.pdf" target="_blank">Tomas Gonzalez</a><br>
+                            <a href="CV_Alex.pdf" target="_blank">Alex Stockel</a>
+                        </p>
+                    </div>
+                    <div class="card2">
+                        <i class="fa-solid fa-gear"></i>
+                        <h2>Hardware</h2>
+                        <p>Ensure smooth operation and reliability of your hardware infrastructure with our hardware services.<br>
+                            Members who can provide those services: <br>
+                            <a href="CV_Tomas.pdf" target="_blank">Tomas Gonzalez</a><br>
+                            <a href="CV_Fabrizio.pdf" target="_blank">Fabrizio Caceres</a><br>
+                        </p>
+                    </div>
+                    <div class="card2">
+                        <i class="fa-solid fa-shield-heart"></i>
+                        <h2>Cybersecurity</h2>
+                        <p>Protect your digital assets and data from threats with our comprehensive cybersecurity solutions.<br>
+                            Members who can provide those services: <br>
+                            <a href="CV_Facundo.pdf" target="_blank">Facundo Villalba</a><br>
+                            <a href="CV_Alex.pdf" target="_blank">Alex Stockel</a>
+                        </p>
+                    </div>
+                    <div class="card2">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <h2>Mobile Apps</h2>
+                        <p>Reach your audience on the go with engaging and user-friendly mobile applications.<br>
+                            Members who can provide those services: <br>
+                            <a href="CV_Tomas.pdf" target="_blank">Tomas Gonzalez</a><br>
+                            <a href="CV_AlexisColman.pdf" target="_blank">Alexis Colman</a><br>
+                        </p>
+                    </div>
+                    <div class="card2">
+                        <i class="fa-solid fa-circle-nodes"></i>
+                        <h2>Software Development</h2>
+                        <p>Streamline your business operations and enhance productivity with customized software solutions.<br>
+                            Members who can provide those services: <br>
+                            <a href="CV_Facundo.pdf" target="_blank">Facundo Villalba</a><br>
+                            <a href="CV_Fabrizio.pdf" target="_blank">Fabrizio Caceres</a><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact">
+    <div class="container reveal">
+        <div class="service">
+            <h1>Contact<span></span></h1>
+        </div>
+        <div class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14462.452537425585!2d121.5405609!3d25.0132583!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa2176c4c0ad%3A0x90db5e44ee29f455!2sNational%20Taiwan%20University%20of%20Science%20and%20Technology!5e0!3m2!1ses!2stw!4v1712207420073!5m2!1ses!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-us">
+            <div class="row">
+                <div class="contact-col">
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <span>
+                            <h5>443solutions@outlook.com</h5>
+                            <p>Email us your query</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-home"></i>
+                        <span>
+                            <h5>Keelung Rd, NTUST, Room 433</h5>
+                            <p>Da’an District, Taipei City, TW</p>
+                        </span>
+                    </div>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <span>
+                            <h5>0963 646 723</h5>
+                            <p>Monday to Friday</p>
+                        </span>
+                    </div>
+                </div>
+                <div class="contact-col">
+                    <form action="from-handler.php" method="post">
+                        <input type="text" name="name" placeholder="Enter your name" required>
+                        <input type="email" name="email" placeholder="Enter your email address" required>
+                        <input type="text" name="subject" placeholder="Enter your subject" required>
+                        <textarea rows="8" name = "message" placeholder="Message" required></textarea>
+                        <button type="submit" class="hero-btn red-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div> 
+    </div> 
+</section>
+<script>
+    window.addEventListener('scroll', reveal);
+
+    function reveal() {
+        var reveals = document.querySelectorAll('.reveal');
+
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var revealtop = reveals[i].getBoundingClientRect().top;
+            var revealpoint = 150;
+
+            if (revealtop < windowHeight - revealpoint) {
+                reveals[i].classList.add('active');
+            } else {
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+
+</script>
+<script>
+    window.addEventListener('scroll', revealHeader);
+
+    function revealHeader() {
+        var servicesSection = document.querySelector('section:nth-of-type(2)');
+        var header = document.querySelector('.header');
+
+        var triggerDistance = window.innerHeight * 2.0;
+        
+        if (servicesSection.getBoundingClientRect().top <= triggerDistance) {
+            header.classList.add('active');
+        } else {
+            header.classList.remove('active');
+        }
+    }
+</script>
+<script>
+    window.addEventListener('scroll', updateHeaderColor);
+
+    function updateHeaderColor() {
+        var header = document.querySelector('.header');
+        var sections = document.querySelectorAll('section');
+
+        var scrollPosition = window.scrollY + (window.innerHeight / 2); 
+
+        var currentSection = null;
+        sections.forEach(function(section) {
+            var sectionTop = section.offsetTop;
+            var sectionBottom = sectionTop + section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                currentSection = section;
+            }
+        });
+
+        var sectionBackgroundColor = window.getComputedStyle(currentSection).getPropertyValue('background-color');
+
+        if (isLightColor(sectionBackgroundColor)) {
+            header.style.backgroundColor = 'rgba(0, 0, 0,0)'; 
+        } else {
+            header.style.backgroundColor = 'rgba(0, 0, 0, 0)'; 
+        }
+    }
+
+    function isLightColor(color) {
+        color = color.substring(4, color.length - 1)
+                     .replace(/ /g, '')
+                     .split(',');
+        var brightness = (parseInt(color[0]) * 299 + parseInt(color[1]) * 587 + parseInt(color[2]) * 114) / 1000;
+
+        return brightness > 125; 
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor =>{
+        anchor.addEventListener('click', function(e){
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior:'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Room433. </p>
+        <p>All rights reserved.</p>
+    </div>
+</footer>
+
+
+
+<script src="swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".slide-content", {
+        slidesPerView: 2,
+        spaceBetween: 25,
+        loop: true,
+        centerSlide: 'true',
+        fade: 'true',
+        grabCursor:'true',
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev"
+        },
+        
+        breakpoints:{
+            0: {
+                slidesPerView: 1,
+            },
+            520: {
+                slidesPerView: 2,
+            },
+            950: {
+                slidesPerView: 3,
+            },
+        },
+    });
+</script>
+<!-- toggle menu -->
+<script>
+    var navLinks = document.getElementById("navLinks");
+    function showMenu(){
+        navLinks.style.right = "0";
+    }
+
+    function hideMenu(){
+        navLinks.style.right="-200px";
+    }
+
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var readMoreBtn = document.getElementById("read-more-btn");
+        var readMoreBtn2 = document.getElementById("read-more-btn2");
+        var readMoreBtn3 = document.getElementById("read-more-btn3");
+        var readMoreBtn4 = document.getElementById("read-more-btn4");
+        var readMoreBtn5 = document.getElementById("read-more-btn5");
+
+        readMoreBtn.addEventListener("click", function() {
+            window.location.href = "index_alex.html";
+        });
+        readMoreBtn2.addEventListener("click", function() {
+            window.location.href = "index_facu.html";
+        });
+        readMoreBtn3.addEventListener("click", function() {
+            window.location.href = "index_toma.html";
+        });
+        readMoreBtn4.addEventListener("click", function() {
+            window.location.href = "index_alexis.html";
+        });
+        readMoreBtn5.addEventListener("click", function() {
+            window.location.href = "index_fabri.html";
+        });
+    });
+</script>
+
+
+
+</html>

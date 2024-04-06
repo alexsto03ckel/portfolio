@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- SWIPER CSS-->
+        <link rel="stylesheet" href="">
+
+        <!-- BOX ICONS-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- CSS-->
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>PORTFOLIO</title>
+
+    </head>
+    <body>
+        <!--SCROLL TOP-->        
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+        <!--HEADER-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="#" class="nav__logo">Clay Doe</a>
+
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link active-link">HOME</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">ABOUT</a></li>
+                        <li class="nav__item"><a href="#services" class="nav__link">SERVICES</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">PORTFOLIO</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">CONTACT</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu-alt-left'></i>
+                </div>
+            </nav>
+        </header>
+        <main class="l-main">
+        <!-- HOME -->
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid">
+                <div class="home__data">
+                    <span class="home__greeting">Hello, My name is  </span>
+                    <h1 class="home__name">Alexis Colman</h1>
+                    <div class="text-container">
+                        <span class="text first-text"> I'm a</span>
+                        <span class="text sec-text">Database Analyst</span>
+                    </div>
+                    <a download="" href="pdf/CV_f11215124.pdf" class="button button-light">Download CV</a>
+                </div>
+                <script>
+                    const text = document.querySelector(".sec-text");
+                    const textLoad = () => {
+                        setTimeout(() =>{
+                            text.textContent = " Database Analyst";
+                        }, 0);
+                        setTimeout(() =>{
+                            text.textContent = "Network Developer";
+                        }, 4000);
+                        setTimeout(() =>{
+                            text.textContent = "Mobile Apps Developer";
+                        }, 8000);
+                    }
+
+                    textLoad();
+                </script>
+                <div class="home__social">
+                    <a href="#" class="home__social-icon"><i class='bx bxl-facebook-square' ></i></a>
+                    <a href="#" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!--ABOUT-->
+        <section class="about section bd-container" id="about">
+            <span class="section-subtitle">My history</span>
+            <h2 class="section-title">About me</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__data bd-grid">
+                    <p class="about__description"><span>Hello, I am <br>Alexis Colman, my specialty is everything related to Networking, Database and Mobile Apps, these abilities were acquired during my time as a student in the CTN and my experience in CONATEL in Paraguay. I like to think of me as a good team player and I always try to work well with my teammates, it doesn't matter how troublesome they can be sometimes. Anyways I am always open to new ideas and the projects that I am assigned to, one of my talents is to be focused and concentrated in my tasks.</span></p>
+
+                    <div>
+                        <span class="about__number">05</span>
+                        <span class="about__achievements">Years off Experience</span>
+                    </div>
+
+                    <div>
+                        <span class="about__number">12+</span>
+                        <span class="about__achievements">Projects completed</span>
+                    </div>
+
+                    <div>
+                        <span class="about__number">03</span>
+                        <span class="about__achievements">Best work awards</span>
+                    </div>
+                </div>
+                <img src="img/perro de mierda.jpeg" alt="" class="about__img">
+            </div>
+        </section>
+
+        <!--QUALIFICATION-->
+        <section class="qualification section bd-container" id="about">
+            <span class="section-subtitle">Experience and education</span>
+            <h2 class="section-title">Qualification</h2>  
+
+            <div class="qualification__container bd-grid">
+                <div class="qualification__content">
+                    <h2 class="qualification__title">
+                        <i class='bx bx-briefcase-alt qualification__title-icon' ></i>
+                        Work experience 
+                    </h2>
+
+                    <div class="bd-grid">
+                        <div class="qualification__data">
+                            <h3 class="qualification__area">Data Analyst</h3>
+
+                            <div class="qualification__box">
+                                <span class="qualification__work">
+                                    <i class='bx bx-briefcase-alt quealification__icon' ></i>
+                                    SISCOTEC - Santa Cruz de la Sierra
+                                </span>
+
+                                <span class="qualification__work">
+                                    <i class='bx bx-calendar-alt quealification__icon' ></i>
+                                    Jan 2019 - May 2019
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <h3 class="qualification__area">App Developer/Designer</h3>
+
+                            <div class="qualification__box">
+                                <span class="qualification__work">
+                                    <i class='bx bx-briefcase-alt quealification__icon' ></i>
+                                    MIT - Massachussets
+                                </span>
+
+                                <span class="qualification__work">
+                                    <i class='bx bx-calendar-alt quealification__icon' ></i>
+                                    Jul 2021 - Oct 2021
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <h3 class="qualification__area">Technician Intern</h3>
+
+                            <div class="qualification__box">
+                                <span class="qualification__work">
+                                    <i class='bx bx-briefcase-alt quealification__icon' ></i>
+                                    National Telecommunications Commission (CONATEL) - Asuncion
+                                </span>
+
+                                <span class="qualification__work">
+                                    <i class='bx bx-calendar-alt quealification__icon' ></i>
+                                    Oct 2021 - Nov 2021
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="qualification__content">
+                    <h2 class="qualification__title">
+                        <i class='bx bx-book-bookmark qualification__title-icon' ></i>
+                        Education
+                    </h2>
+
+                    <div class="bd-grid">
+                        <div class="qualification__data">
+                            <h3 class="qualification__area">Computer Technician</h3>
+
+                            <div class="qualification__box">
+                                <span class="qualification__work">
+                                    <i class='bx bx-book-alt quealification__icon' ></i>
+                                    Asuncion - National Technical College
+                                </span>
+
+                                <span class="qualification__work">
+                                    <i class='bx bx-calendar-alt quealification__icon' ></i>
+                                    Jan 2019 - Dec 2021
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <h3 class="qualification__area">Computer Science and Information Engineer</h3>
+
+                            <div class="qualification__box">
+                                <span class="qualification__work">
+                                    <i class='bx bx-book-alt quealification__icon' ></i>
+                                    Taipei - NTUST
+                                </span>
+
+                                <span class="qualification__work">
+                                    <i class='bx bx-calendar-alt quealification__icon' ></i>
+                                    Jan 2022 - Dec 2025
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--SERVICES-->
+        <section class="services section bd-container" id="services">
+            <span class="section-subtitle">What i offer</span>
+            <h2 class="section-title">Services</h2>        
+
+            <div class="services__container bd-grid">
+                <div class="services__data">
+                    <i class='bx bx-palette services__icon' ></i>
+                    <h3 class="services__title">Networking Solutions</h3>
+                    <p class="services__description">Unlock seamless connectivity and enhance your network infrastructure with my comprehensive networking solutions. From setting up robust Wi-Fi networks to optimizing LAN/WAN configurations, I provide tailored solutions to meet your business needs. With my capabilities you can ensure smooth operations, security enhancements, and scalability, empowering your business to thrive in today's digital landscape.</p>
+                    <a href="#" class="button button-link">Know More</a>
+                </div>                
+                <div class="services__data">
+                    <i class='bx bx-;aptop services__icon' ></i>
+                    <h3 class="services__title">Database Design/Developer</h3>
+                    <p class="services__description">I specialize in database solutions tailored to your specific business needs. From designing efficient database architectures to optimizing performance and ensuring data security, I am committed to delivering reliable and scalable solutions. Whether you require database migration, maintenance, or troubleshooting, I provide personalized expertise to streamline your data management processes. Let me help you unlock the full potential of your data infrastructure, ensuring seamless operations and empowering your business growth.</p>
+                    <a href="#" class="button button-link">Know More</a>
+                </div>                
+                <div class="services__data">
+                    <i class='bx bx-pen services__icon' ></i>
+                    <h3 class="services__title">Mobile Apps Developing</h3>
+                    <p class="services__description">As a mobile app developer, I bring your ideas to life with intuitive and engaging applications crafted for various platforms. From concept to deployment, I am dedicated to creating user-centric experiences that resonate with your audience. Whether it's Android, iOS, or cross-platform development, I leverage cutting-edge technologies to build robust and scalable solutions. Whether you need a standalone app or integration with existing systems, I ensure seamless functionality and captivating design. Let's collaborate to turn your vision into a reality and make your app stand out in the competitive market.</p>
+                    <a href="#" class="button button-link">Know More</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!--PORTFOLIO-->
+        <section class="portfolio section bd-container" id="portfolio">
+            <span class="section-subtitle">My recent works</span>
+            <h2 class="section-title">Portfolio</h2> 
+            
+            <div class="portfolio__nav">
+                <span class="portfolio__item active-portfolio" data-filter="all">All</span>
+                <span class="portfolio__item" data-filter=".web">Network</span>
+                <span class="portfolio__item" data-filter=".ux">Database</span>
+                <span class="portfolio__item" data-filter=".app">App</span>
+            </div>
+
+            <div class="portfolio__container bd-grid">
+                <div class="portfolio__content mix web">
+                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">Network</span>
+                        <a href="#"><h2 class="portfolio__title">Subnetting Network with OSPF Dynamic Routing and Application Layer Services in Cisco Packet Tracer </h2></a>
+                        <a href="#" class="button button-link ">View Details</a>
+                    </div>
+                </div>
+
+
+                <div class="portfolio__content mix web">
+                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">Database</span>
+                        <a href="#"><h2 class="portfolio__title">Design of a personalized Database for SISCOTEC</h2></a>
+                        <a href="#" class="button button-link ">View Details</a>
+                    </div>
+                </div>
+
+
+                <div class="portfolio__content mix ux">
+                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">App Development</span>
+                        <a href="#"><h2 class="portfolio__title">App Design and Development using MIT App Inventor</h2></a>
+                        <a href="#" class="button button-link">View Details</a>
+                    </div>
+                </div>
+
+
+                <div class="portfolio__content mix ux">
+                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">Network</span>
+                        <a href="#"><h2 class="portfolio__title">Structured Network Cabling for Holding Tech Company.</h2></a>
+                        <a href="#" class="button button-link">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio__content mix app">
+                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">Database</span>
+                        <a href="#"><h2 class="portfolio__title">Optimization of an existing database for CONATEL</h2></a>
+                        <a href="#" class="button button-link">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio__content mix app">
+                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">App Development</span>
+                        <a href="#"><h2 class="portfolio__title">Co-founder of the Application Version of the First Paraguayan Social Web</h2></a>
+                        <a href="#" class="button button-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--CONTACT ME -->
+        <section class="contact section bd-container" id="contact">
+            <span class="section-subtitle">For projects</span>
+            <h2 class="section-title">Contact Me</h2> 
+
+            <div class="contact__container bd-grid">
+
+                <div class="contact__content bd-grid">
+
+                    <div class="contact__box">
+
+                        <i class='bx bx-home contact__icon'></i>
+                        <h3 class="contact__title">Location</h3>
+                        <span class="contact__description">No. 43號, Section 4, Keelung Rd, Da’an District, Taipei City, 106</span>
+                    </div>
+
+                    <div class="contact__box">
+
+                        <i class='bx bx-phone contact__icon'></i>
+                        <h3 class="contact__title">Number</h3>
+                        <span class="contact__description">+886 0963647169</span>
+                    </div>
+
+                    <div class="contact__box">
+
+                        <i class='bx bx-envelope contact__icon'></i>
+                        <h3 class="contact__title">Gmail</h3>
+                        <span class="contact__description">alexiscolmanuptp@gmail.com</span>
+                    </div>
+                </div>
+                <form action="" class="contact__form">
+                    <div class="contact__inputs">
+                        <input type="text" placeholder = "Name" class="contact__input">
+                        <input type="email" placeholder = "Email" class="contact__input">
+                    </div>
+
+                    <div class="contact__inputs">
+                        <input type="text" placeholder = "Project" class="contact__input">
+                        <input type="number" placeholder = "Number" class="contact__input">
+                    </div>
+
+                    <textarea name="" id="" cols="0" rows="7" placeholder="Message" class="contact__input"></textarea>
+
+                    <input type="submit" value= "Send message" class="button contact__button">
+                </form>
+            </div>
+        </section>
+
+
+
+        </main>
+        <!--FOOTER-->
+
+        <footer class="footer">
+            <div class="footer__container bd-container">
+                <h1 class="footer__title">Alexis Colman</h1>
+                <p class="footer__description">TEXTO DE LOS PERRO</p>
+
+                <div class="footer__social">
+                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
+                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
+                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
+
+                </div>
+                <p class="footer__copy">&#169; Pilin</p>
+            </div>
+        </footer>
+
+        <!--MIXTUP FILTER-->
+        <script src="js/mixitup.min.js"></script>
+
+        <!--SWIPER-->
+
+        <!--GSAP-->
+        <script src="js/gsap.min.js"></script>
+
+        <!--JS-->
+        <SCRIpt src="js/main.js"></SCRIpt>
+    </body>
+</html>

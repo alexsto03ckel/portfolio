@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- SWIPER CSS-->
+        <link rel="stylesheet" href="">
+
+        <!-- BOX ICONS-->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+        <!-- CSS-->
+        <link rel="stylesheet" href="css/style.css">
+
+        <title>PORTFOLIO</title>
+
+    </head>
+    <body>
+        <!--SCROLL TOP-->        
+        <a href="#" class="scrolltop" id="scroll-top">
+            <i class='bx bx-chevron-up scrolltop__icon'></i>
+        </a>
+
+        <!--HEADER-->
+        <header class="l-header" id="header">
+            <nav class="nav bd-container">
+                <a href="#" class="nav__logo">Clay Doe</a>
+
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link active-link">HOME</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">ABOUT</a></li>
+                        <li class="nav__item"><a href="#services" class="nav__link">SERVICES</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">PORTFOLIO</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">CONTACT</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu-alt-left'></i>
+                </div>
+            </nav>
+        </header>
+        <main class="l-main">
+        <!-- HOME -->
+        <section class="home" id="home">
+            <div class="home__container bd-container bd-grid">
+                <div class="home__data">
+                    <span class="home__greeting">Hello, My name is  </span>
+                    <h1 class="home__name">Alex Stockel</h1>
+                    <div class="text-container">
+                        <span class="text first-text"> I'm a</span>
+                        <span class="text sec-text">Web Developer</span>
+                    </div>
+                    <a download="" href="pdf/CV_f11215124.pdf" class="button button-light">Download CV</a>
+                </div>
+                <script>
+                    const text = document.querySelector(".sec-text");
+                    const textLoad = () => {
+                        setTimeout(() =>{
+                            text.textContent = " Web Developer";
+                        }, 0);
+                        setTimeout(() =>{
+                            text.textContent = " Software Developer";
+                        }, 4000);
+                        setTimeout(() =>{
+                            text.textContent = " AI Developer";
+                        }, 8000);
+                    }
+
+                    textLoad();
+                </script>
+                <div class="home__social">
+                    <a href="#" class="home__social-icon"><i class='bx bxl-facebook-square' ></i></a>
+                    <a href="#" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!--ABOUT-->
+        <section class="about section bd-container" id="about">
+            <span class="section-subtitle">My history</span>
+            <h2 class="section-title">About me</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__data bd-grid">
+                    <p class="about__description"><span>Hello, I am <br>TEXTAZO</span></p>
+
+                    <div>
+                        <span class="about__number">05</span>
+                        <span class="about__achievements">Years off Experience</span>
+                    </div>
+
+                    <div>
+                        <span class="about__number">29+</span>
+                        <span class="about__achievements">Projects completed</span>
+                    </div>
+
+                    <div>
+                        <span class="about__number">07</span>
+                        <span class="about__achievements">Best work awards</span>
+                    </div>
+                </div>
+                <img src="img/perro de mierda.jpeg" alt="" class="about__img">
+            </div>
+        </section>
+
+        <!--QUALIFICATION-->
+        <section class="qualification section bd-container" id="about">
+            <span class="section-subtitle">Experience and education</span>
+            <h2 class="section-title">Qualification</h2>  
+
+            <div class="qualification__container bd-grid">
+                <div class="qualification__content">
+                    <h2 class="qualification__title">
+                        <i class='bx bx-briefcase-alt qualification__title-icon' ></i>
+                        Work experience 
+                    </h2>
+
+                    <div class="bd-grid">
+                        <div class="qualification__data">
+                            <h3 class="qualification__area">Senior Front End Developer</h3>
+
+                            <div class="qualification__box">
+                                <span class="qualification__work">
+                                    <i class='bx bx-briefcase-alt quealification__icon' ></i>
+                                    Adobe - New York
+                                </span>
+
+                                <span class="qualification__work">
+                                    <i class='bx bx-calendar-alt quealification__icon' ></i>
+                                    Jan 2019 - Aug 2010
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <h3 class="qualification__area">UI / UX Designer</h3>
+
+                            <div class="qualification__box">
+                                <span class="qualification__work">
+                                    <i class='bx bx-briefcase-alt quealification__icon' ></i>
+                                    Figma - Lima
+                                </span>
+
+                                <span class="qualification__work">
+                                    <i class='bx bx-calendar-alt quealification__icon' ></i>
+                                    Jan 2019 - Aug 2010
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <h3 class="qualification__area">Web designer</h3>
+
+                            <div class="qualification__box">
+                                <span class="qualification__work">
+                                    <i class='bx bx-briefcase-alt quealification__icon' ></i>
+                                    Apple Inc - New york
+                                </span>
+
+                                <span class="qualification__work">
+                                    <i class='bx bx-calendar-alt quealification__icon' ></i>
+                                    Jan 2019 - Aug 2010
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="qualification__content">
+                    <h2 class="qualification__title">
+                        <i class='bx bx-book-bookmark qualification__title-icon' ></i>
+                        Education
+                    </h2>
+
+                    <div class="bd-grid">
+                        <div class="qualification__data">
+                            <h3 class="qualification__area">Computer Technician</h3>
+
+                            <div class="qualification__box">
+                                <span class="qualification__work">
+                                    <i class='bx bx-book-alt quealification__icon' ></i>
+                                    Lima - Computer Institute
+                                </span>
+
+                                <span class="qualification__work">
+                                    <i class='bx bx-calendar-alt quealification__icon' ></i>
+                                    Jan 2019 - Aug 2010
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="qualification__data">
+                            <h3 class="qualification__area">Master in web developer</h3>
+
+                            <div class="qualification__box">
+                                <span class="qualification__work">
+                                    <i class='bx bx-book-alt quealification__icon' ></i>
+                                    Madrid - Design institute
+                                </span>
+
+                                <span class="qualification__work">
+                                    <i class='bx bx-calendar-alt quealification__icon' ></i>
+                                    Jan 2019 - Aug 2010
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--SERVICES-->
+        <section class="services section bd-container" id="services">
+            <span class="section-subtitle">What i offer</span>
+            <h2 class="section-title">Services</h2>        
+
+            <div class="services__container bd-grid">
+                <div class="services__data">
+                    <i class='bx bx-palette services__icon' ></i>
+                    <h3 class="services__title">Ui/Ux Design</h3>
+                    <p class="services__description">TEXTAZO</p>
+                    <a href="#" class="button button-link">Know More</a>
+                </div>                
+                <div class="services__data">
+                    <i class='bx bx-;aptop services__icon' ></i>
+                    <h3 class="services__title">Web development</h3>
+                    <p class="services__description">TEXTAZO</p>
+                    <a href="#" class="button button-link">Know More</a>
+                </div>                
+                <div class="services__data">
+                    <i class='bx bx-pen services__icon' ></i>
+                    <h3 class="services__title">Graphic Design</h3>
+                    <p class="services__description">TEXTAZO</p>
+                    <a href="#" class="button button-link">Know More</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!--PORTFOLIO-->
+        <section class="portfolio section bd-container" id="portfolio">
+            <span class="section-subtitle">My recent works</span>
+            <h2 class="section-title">Portfolio</h2> 
+            
+            <div class="portfolio__nav">
+                <span class="portfolio__item active-portfolio" data-filter="all">All</span>
+                <span class="portfolio__item" data-filter=".web">Web</span>
+                <span class="portfolio__item" data-filter=".ux">Ui/Ux</span>
+                <span class="portfolio__item" data-filter=".app">App</span>
+            </div>
+
+            <div class="portfolio__container bd-grid">
+                <div class="portfolio__content mix web">
+                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">Web development</span>
+                        <a href="#"><h2 class="portfolio__title">TEXTAZO2</h2></a>
+                        <a href="#" class="button button-link ">View Details</a>
+                    </div>
+                </div>
+
+
+                <div class="portfolio__content mix web">
+                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">Web development</span>
+                        <a href="#"><h2 class="portfolio__title">TEXTAZO2</h2></a>
+                        <a href="#" class="button button-link ">View Details</a>
+                    </div>
+                </div>
+
+
+                <div class="portfolio__content mix ux">
+                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">Web development</span>
+                        <a href="#"><h2 class="portfolio__title">TEXTAZO2</h2></a>
+                        <a href="#" class="button button-link">View Details</a>
+                    </div>
+                </div>
+
+
+                <div class="portfolio__content mix ux">
+                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">Web development</span>
+                        <a href="#"><h2 class="portfolio__title">TEXTAZO2</h2></a>
+                        <a href="#" class="button button-link">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio__content mix app">
+                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">Web development</span>
+                        <a href="#"><h2 class="portfolio__title">TEXTAZO2</h2></a>
+                        <a href="#" class="button button-link">View Details</a>
+                    </div>
+                </div>
+
+                <div class="portfolio__content mix app">
+                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">Web development</span>
+                        <a href="#"><h2 class="portfolio__title">TEXTAZO2</h2></a>
+                        <a href="#" class="button button-link">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--CONTACT ME -->
+        <section class="contact section bd-container" id="contact">
+            <span class="section-subtitle">For projects</span>
+            <h2 class="section-title">Contact Me</h2> 
+
+            <div class="contact__container bd-grid">
+
+                <div class="contact__content bd-grid">
+
+                    <div class="contact__box">
+
+                        <i class='bx bx-home contact__icon'></i>
+                        <h3 class="contact__title">Location</h3>
+                        <span class="contact__description">DIRECCION DE LOS PERROS</span>
+                    </div>
+
+                    <div class="contact__box">
+
+                        <i class='bx bx-phone contact__icon'></i>
+                        <h3 class="contact__title">Number</h3>
+                        <span class="contact__description">Numero de los perros</span>
+                    </div>
+
+                    <div class="contact__box">
+
+                        <i class='bx bx-envelope contact__icon'></i>
+                        <h3 class="contact__title">Gmail</h3>
+                        <span class="contact__description">MAIL DE LOS PERROS</span>
+                    </div>
+                </div>
+                <form action="" class="contact__form">
+                    <div class="contact__inputs">
+                        <input type="text" placeholder = "Name" class="contact__input">
+                        <input type="email" placeholder = "Email" class="contact__input">
+                    </div>
+
+                    <div class="contact__inputs">
+                        <input type="text" placeholder = "Project" class="contact__input">
+                        <input type="number" placeholder = "Number" class="contact__input">
+                    </div>
+
+                    <textarea name="" id="" cols="0" rows="7" placeholder="Message" class="contact__input"></textarea>
+
+                    <input type="submit" value= "Send message" class="button contact__button">
+                </form>
+            </div>
+        </section>
+
+
+
+        </main>
+        <!--FOOTER-->
+
+        <footer class="footer">
+            <div class="footer__container bd-container">
+                <h1 class="footer__title">NOMBRE DE LOS PERROS</h1>
+                <p class="footer__description">TEXTO DE LOS PERRO</p>
+
+                <div class="footer__social">
+                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
+                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
+                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
+
+                </div>
+                <p class="footer__copy">&#169; Pilin</p>
+            </div>
+        </footer>
+
+        <!--MIXTUP FILTER-->
+        <script src="js/mixitup.min.js"></script>
+
+        <!--SWIPER-->
+
+        <!--GSAP-->
+        <script src="js/gsap.min.js"></script>
+
+        <!--JS-->
+        <SCRIpt src="js/main.js"></SCRIpt>
+    </body>
+</html>

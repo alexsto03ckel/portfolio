@@ -1,0 +1,812 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body{
+    align-items: center;
+    justify-content: center;
+
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #191a2b;
+}
+.nav img{
+    width: 150px;
+}
+.logo{
+    width: 75px;
+}
+
+.nav-links{
+    padding: 6px 0;
+    flex: 1;
+    text-align: right;
+}
+.nav-links li{
+    display: inline-block;
+    margin: 0 15px;
+    padding: 8px 12px;
+}
+.nav-links li a{
+    text-decoration: none;
+    /* here the color of the letters that are in the top*/
+    color: #C0C0C0;
+    padding: 5px 0;
+    font-size: 19px;
+    position: relative;
+}
+.nav-links li a::after{
+    content: '';
+    /* the color that is below of each word that are inn the top*/
+    background: #ffffff;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    display: block;
+    margin: auto;
+    transition: width 0.25s;
+}
+.nav-links li a:hover::after{
+    width: 100%;
+}
+.slide-container{
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+    background-color: #171C36;
+}
+.slide-content{
+    margin: 0 40px;
+    overflow: hidden;
+    border-radius: 25px;
+}
+.card{
+    /* this change the color in about us, the color is the letters and background is white*/
+    color: #171C36;
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+
+.image-content,
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+}
+.image-content{
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    /*change the color of the background of the pictures in about us */
+    background-color: #5E567D;
+    border-radius: 25px 25px 0 25px;
+}
+
+
+.overlay::after,
+.overlay::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    /*color of the corner of aboaut us */
+    background-color: #5E567D;
+}
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    /*color below of the previous one*/
+    background-color: #ffffff;
+}
+.card-image{
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    /*this change the color of the circle of the photo*/
+    background: #171C36;
+    padding: 3px;
+}
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    /*the circle inside*/
+    border: 4px solid #5E567D;
+}
+.name{
+    font-size: 18px;
+    font-weight: 500;
+    /*the name of the person */
+    color:#5E567D;
+}
+.description{
+   font-size: 14px;
+   text-align: center;
+   z-index:1000; 
+}
+/*color dle boton antes de apretar*/
+.button{
+    border: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 8px 16px;
+    background-color: #171C36;
+    border-radius: 6px;
+    margin: 14px;
+    transition: all 0.3s ease;
+}
+/*button color when you put the click on*/
+.button:hover{
+    background: #5E567D;
+}
+/* the button to run into all the participants*/
+.swiper-navBtn{
+    color: #b9bac0;
+    transition: color 0.3s ease;
+}
+/* the button to run into all the participants when the click is on*/
+.swiper-navBtn:hover{
+    color: #5E567D;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+    font-size: 40px;
+}
+.swiper-button-next{
+    right: 0;
+}
+.swiper-button-prev{
+    left: 0;
+}
+/*here change the balls below the curriculums that are not active*/
+.swiper-pagination-bullet{
+    background-color: #5E567D;
+    opacity: 1;
+}
+/*here change the balls below the curriculums that is active*/
+.swiper-pagination-bullet-active{
+    background-color: #C7EEF7;
+}
+
+section{
+    min-height: 125vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*color of the page about us*/
+section:nth-child(4){
+    color:  #fff;
+    background: #171C36;
+
+}
+
+
+/* OUR SERVICESSSS */
+/* this change the background of our services*/
+
+section:nth-child(5){
+    background: #171C36;
+    background-color: #171C36;
+
+}
+
+section .container{
+    margin: 100px;  
+}
+
+section h0{
+    font-size: 60px;
+    text-align: center;
+}
+
+/* this is the tittle of each services*/
+
+section h3{
+    color:#d214a9;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .cards{
+    display: flex;
+}
+
+
+@media (max-width: 700px){
+    .text-box1 h1{
+        font-size: 40px;
+    }
+    section h0{
+        font-size: 40px;
+    }
+    section .cards{
+        flex-direction: column;
+    }
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+#contact {
+    background-color: #171C36; /* Replace this with the desired solid color */
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #191a2b;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+/*text box of contact*/
+.contact-form button {
+    padding: 10px 20px;
+    background: #fff;
+    color: #102128;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #5E567D;
+}
+
+.text-box1{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+
+.text-box1 p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color:#000000;
+    text-align: center;
+}
+
+.text-box1 h1{
+    font-size: 80px;
+    text-align: center;
+    color:#D4AF37;
+    background-color: #B9BAC0;
+}
+
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    background-color: #14471c;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    border: 1px solid #ffffff;
+    background:#bcdfbd;
+    transition: 1s; 
+}
+
+nav .fa{
+    display: none;
+}
+
+
+footer {
+    background-color: #191a2b;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+.footer-content {
+    height: 35px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+}
+
+/* Styling for the SoundCloud player */
+.contact-col .contact-us .contact-col div span iframe {
+    width: 100%; /* Set the width of the iframe to 100% */
+    height: 300px; /* Set the height of the iframe */
+    border: none; /* Remove border */
+    margin-top: 20px; /* Add some top margin */
+}
+
+/* Styling for the player controls */
+.contact-col .contact-us .contact-col div span iframe .soundcloud-player .controls {
+    display: none; /* Hide the player controls */
+}
+
+/* Styling for the player progress bar */
+.contact-col .contact-us .contact-col div span iframe .soundcloud-player .progress {
+    height: 3px; /* Set the height of the progress bar */
+    background-color: #FF0000; /* Change the color of the progress bar */
+}
+
+/* Styling for the player waveform */
+.contact-col .contact-us .contact-col div span iframe .soundcloud-player .waveform {
+    display: none; /* Hide the waveform */
+}
+
+
+.text-box
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    }
+    
+    .container{
+    /* min-height: 100vh;
+    width:100%; */
+    background-color: #171C36;
+    background-size: 100% auto;
+    }
+    
+    .wrapper{
+    padding: 5% 8%;
+    }
+    
+    .service{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    h1{
+        color:#fff;
+        font-size: 40px;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: transparent;
+        letter-spacing: 4px;
+        background-color: rgb(32, 3, 3);
+            /*the color of the tittle OUR SERVICES*/
+        /* background: linear-gradient(8deg, rgba(8,52,83,1) 0%, rgba(0,230,173,1) 41%, rgba(41,17,45,1) 100%); */
+        background: #C7EEF7;;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position:relative;
+    }
+    h1:after{
+        content: "";
+        position: absolute;
+        top:100%;
+        left: 10%;
+        height: 18px;
+        width: 80%;
+        border-radius: 100px;
+        background-color: rgba(255,255,255,0.05);
+    }
+    
+    h1 span{
+        position: absolute;
+        top: 100%;
+        left: 10%;
+        height: 15px;
+        width: 15px;
+        border-radius: 60%;
+        background-color: #72e2ae;
+        animation: anim 3s linear infinite;
+    }
+    
+    @keyframes anim{
+        95%{
+            opacity: 1;
+        }
+        100%{
+            opacity: 0;
+            left: 88%;
+        }
+    }
+    
+    
+    .cards2{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 30px;
+        margin-top: 50px;
+    }
+    
+    .card2{
+        height: 350px;
+        width: 250px;
+        /* This change the color of the background of each box of service*/
+        background-color: #5E567D;
+        padding: 3% 8%;
+        border: 0.2px solid rgba(114, 226, 174, 0.2);
+        border-radius: 2px;
+        transition: .6s;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .card2:after{
+        content:"";
+        position:absolute;
+        top: 150px;
+        left: -200px;
+        width: 120%;
+        transform: rotate(50deg);
+        /*the aniamtion when you are on a block service*/
+        background-color: #87B7CC;
+        height: 18px;
+        filter: blur(30px);
+        opacity: 0.5;
+        transition: 1s;
+    
+    }
+    .card2:hover:after{
+        width:225%;
+        top: -20%;
+    
+    }
+    /*color of the objects in services*/
+    .card2 i{
+        color:#171C36;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-size: 5rem;
+    }
+    
+    .card2 h2{
+        color:#B9BAC0;
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .card2 p{
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+        margin: 12px 0;
+        color: rgba(255,255,255,0.6);
+    }
+    
+    .card2:hover{
+        background-color: transparent;
+        transform:translateY(-8px);
+        border-color: #B9BAC0;
+    }
+    
+    .card2:hover i{
+        color:#B3F8FF;
+    }
+
+    @media screen and (max-width:700px){
+        .cards2{grid-template-columns: repeat(2,1fr);
+        }
+
+        h1{
+            font-size: 3.5rem;
+        }
+        .text-box1 h1{
+            font-size: 40px;
+        }
+
+        .text-box1 h1{
+            font-size: 20px;
+        }
+        .nav-links li{
+            display: block;
+        }
+        .nav-links{
+            position: fixed;
+            background: #E8E8E8;
+            height: 100vh;
+            width: 200px;
+            top: 0;
+            right:-200px;
+            text-align: left;
+            z-index: 2;
+            transition: 1s;
+            
+        }
+
+        nav .fa{
+            display: block;
+            color: #B9BAC0;
+            margin: 10px;
+            font-size: 22px;
+            cursor: pointer;
+        }
+
+        .nav-links li{
+            padding: 15px;
+        }
+
+        .nav-links li a{
+            text-decoration: none;
+            color: #ffffff;
+            padding: 5px 0;
+            font-size: 19px;
+            position: relative;
+        }
+    }
+    
+    /* the names of the people who make the sevices*/
+    a {
+        color: #87B7CC;
+        text-decoration: none; 
+    }
+    /* the names of the people who make the sevices with the click on*/
+    a:hover {
+        color: #5E567D; 
+    }
+
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+.location {
+    margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+    margin-top: 30px;
+    width: 100%;
+    height: 20x;
+}
+
+.contact-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+    margin-left: 30px; /* Adjust the margin to separate from the other column */
+    width: 100%; /* Each column takes half of the container width */
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Ensure items are spaced apart */
+    width: 100%; /* Ensure full width */
+    margin-top: 30px;
+}
+
+.location iframe{
+    width: 100%;
+}
+
+.contact-us{
+    width: 100%;
+    margin: 30px;
+    align-items: center;
+}
+
+.contact-col input,
+.contact-col textarea {
+    width: calc(100% - 30px); /* Set the width to 100% minus the padding */
+    padding: 15px;
+    margin-bottom: 20px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.contact-col button {
+    width: 100%; /* Set the width to 100% */
+    padding: 15px;
+    border: none;
+    background-color: #C7EEF7; /* Adjust button background color */
+    color: black; /* Set button text color */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add transition effect */
+    font-weight: bold;
+}
+
+.contact-col div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%; /* Each column takes half of the container width */
+}
+/*icon color*/
+.contact-col div .fa{
+    font-size: 28px;
+    color: #C7EEF7;
+    margin:10px;
+    margin-right: 30px;
+}
+
+.contact-col div p{
+    padding: 0;
+    color: #eee7e7
+}
+.contact-col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #eee7e7;
+    font-weight: 400;
+}
+.contact-col input, .contact-col textarea
+{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#portfolio .text-box1 p {
+    color: #B3F8FF;
+}
+
+#portfolio .text-box1 .hero-btn {
+    background-color: #171C36;
+    color: #C0C0C0;
+
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* For screens smaller than 700px */
+@media screen and (max-width: 700px) {
+    /* Adjustments for navigation */
+    nav .fa {
+        display: block;
+    }
+    .nav-links li {
+        display: block;
+    }
+    .nav-links {
+        position: fixed;
+        background: #E8E8E8;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    .nav-links li {
+        padding: 15px;
+    }
+    .nav-links li a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 5px 0;
+        font-size: 19px;
+        position: relative;
+    }
+    /* Adjustments for hero section text box */
+    .text-box1 h1 {
+        font-size: 20px;
+    }
+    .text-box1 h1 {
+        font-size: 20px;
+    }
+    /* Adjustments for services section */
+    .cards2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    h1 {
+        font-size: 3.5rem;
+    }
+    /* Adjustments for contact form */
+    .contact-col div {
+        width: 100%;
+    }
+}
+
+/* For screens smaller than 500px */
+@media screen and (max-width: 500px) {
+    /* Adjustments for hero section text box */
+    .text-box1 h1 {
+        font-size: 16px;
+    }
+    /* Adjustments for services section */
+    .cards2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    h1 {
+        font-size: 3rem;
+    }
+}
