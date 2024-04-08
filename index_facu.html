@@ -11,7 +11,7 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
         <!-- CSS-->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style_facu.css">
 
         <title>PORTFOLIO</title>
 
@@ -58,26 +58,30 @@
                 </div>
                 <script>
                     const text = document.querySelector(".sec-text");
+
                     const textLoad = () => {
-                        setTimeout(() =>{
-                            text.textContent = " Web Developer";
-                        }, 0);
-                        setTimeout(() =>{
-                            text.textContent = " Software Developer";
-                        }, 4000);
-                        setTimeout(() =>{
-                            text.textContent = " AI Developer";
-                        }, 8000);
+                        const textValues = ["Web Developer", "Database Designer", "Project Designer", "Software Developer"];
+                        let currentIndex = 0;
+
+                        const changeText = () => {
+                            text.textContent = textValues[currentIndex];
+                            currentIndex = (currentIndex + 1) % textValues.length; // Increment index, loop back to 0 when reaching the end
+                            setTimeout(changeText, 4000); // Repeat after 4 seconds
+                        };
+
+                        changeText(); // Start the text change loop
                     }
 
                     textLoad();
                 </script>
                 <div class="home__social">
-                    <a href="#" class="home__social-icon"><i class='bx bxl-facebook-square' ></i></a>
-                    <a href="#" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
-                    <a href="#" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=595961588859" class="home__social-icon"><i class='bx bxl-whatsapp' ></i></a>
+                    <a href="https://www.instagram.com/facundovb_/" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
                 </div>
 
+                <div class="home__img">
+                    <img src="img/FACU.png" alt="">
+                </div>
             </div>
         </section>
 
@@ -88,7 +92,7 @@
 
             <div class="about__container bd-grid">
                 <div class="about__data bd-grid">
-                    <p class="about__description"><span>Hello, I am <br>a creative person with imagination and initiative to develop new ideas or work on existing ones. I have a great capacity for work, integration,flexibility, and dynamism. I am looking to develop professionally within a team or individually,giving my best with a very positive predisposition and attitude towards the responsibilities assigned to me. Iam willing to listen and learn from my mistakes</span></p>
+                    <p class="about__description"><span>Hello, I am <br>a creative person with imagination and initiative to develop new ideas or work on existing ones. I have a great capacity for work, integration,flexibility, and dynamism. I am looking to develop professionally within a team or individually,giving my best with a very positive predisposition and attitude towards the responsibilities assigned to me. I am willing to listen and learn from my mistakes</span></p>
 
                     <div>
                         <span class="about__number">03</span>
@@ -105,7 +109,7 @@
                         <span class="about__achievements">Highschool distinction diplomas</span>
                     </div>
                 </div>
-                <img src="img/perro de mierda.jpeg" alt="" class="about__img">
+                <img src="img/About_facu.jpeg" alt="" class="about__img">
             </div>
         </section>
 
@@ -241,53 +245,53 @@
 
             <div class="portfolio__container bd-grid">
                 <div class="portfolio__content mix web">
-                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <img src="img/sudoku.png" alt="" class="portfolio__img">
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Programming</span>
-                        <a href="#"><h2 class="portfolio__title">Sudoku solver</h2></a>
+                        <h2 class="portfolio__title">Sudoku solver</h2>
                     </div>
                 </div>
 
 
                 <div class="portfolio__content mix web">
-                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <img src="img/zelda.png" alt="" class="portfolio__img">
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Programming</span>
-                        <a href="#"><h2 class="portfolio__title">Game in python</h2></a>
+                        <h2 class="portfolio__title">Game in python</h2>
                     </div>
                 </div>
 
 
                 <div class="portfolio__content mix ux">
-                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <img src="img/portfolio.jpg" alt="" class="portfolio__img">
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Web development</span>
-                        <a href="#"><h2 class="portfolio__title">Portfolio website</h2></a>
+                        <h2 class="portfolio__title">Portfolio website</h2>
                     </div>
                 </div>
 
 
                 <div class="portfolio__content mix ux">
-                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <img src="img/websitedesign.png" alt="" class="portfolio__img">
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Web development</span>
-                        <a href="#"><h2 class="portfolio__title">Website design</h2></a>
+                        <h2 class="portfolio__title">Website design</h2>
                     </div>
                 </div>
 
                 <div class="portfolio__content mix app">
-                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <img src="img/dosattack.png" alt="" class="portfolio__img">
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Machine learning</span>
-                        <a href="#"><h2 class="portfolio__title">DOS attack AI</h2></a>
+                        <h2 class="portfolio__title">DOS attack AI</h2>
                     </div>
                 </div>
 
                 <div class="portfolio__content mix app">
-                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <img src="img/packettracer.png" alt="" class="portfolio__img">
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Machine learning</span>
-                        <a href="#"><h2 class="portfolio__title">Subnet network with packet tracer</h2></a>
+                        <h2 class="portfolio__title">Subnet network with packet tracer</h2>
                     </div>
                 </div>
             </div>
@@ -324,7 +328,7 @@
                         <span class="contact__description">facundovillalbauptp@gmail.com</span>
                     </div>
                 </div>
-                <form action="" class="contact__form">
+                <form action="https://formsubmit.co/433solutions@gmail.com" method="POST" class="contact__form">
                     <div class="contact__inputs">
                         <input type="text" placeholder = "Name" class="contact__input">
                         <input type="email" placeholder = "Email" class="contact__input">
@@ -336,7 +340,6 @@
                     </div>
 
                     <textarea name="" id="" cols="0" rows="7" placeholder="Message" class="contact__input"></textarea>
-
                     <input type="submit" value= "Send message" class="button contact__button">
                 </form>
             </div>
@@ -346,19 +349,15 @@
 
         </main>
         <!--FOOTER-->
-
         <footer class="footer">
             <div class="footer__container bd-container">
-                <h1 class="footer__title">Facundo Villalba</h1>
-                <p class="footer__description">Ntust student</p>
-
+                <h1 class="footer__title"> Facundo Villalba</h1>
+                <p class="footer__description">433 Solutions</p>
                 <div class="footer__social">
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
-
+                    <div class="footer__social">
+                    <a href="https://open.spotify.com/playlist/5BSUFhAWyo0F7afjXNUum5" class="footer__link"><i class='bx bxl-spotify'></i></a>     
                 </div>
-                <p class="footer__copy">&#169; 433 studios</p>
+                <p class="footer__copy">&#169; All rights reserved. Total views: <span id="view-count">Loading...</span></p>
             </div>
         </footer>
 
@@ -372,5 +371,7 @@
 
         <!--JS-->
         <SCRIpt src="js/main.js"></SCRIpt>
+        
+        <script src = "js/viewcountscript.js"></script>
     </body>
 </html>

@@ -25,12 +25,12 @@
         <!--HEADER-->
         <header class="l-header" id="header">
             <nav class="nav bd-container">
-                <a href="#" class="nav__logo">Clay Doe</a>
+                <a href="#" class="nav__logo">Tomas Gonzalez</a>
 
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="main.html" class="nav__link active-link">HOME</a></li>
+                        <li class="nav__item"><a href="index.html" class="nav__link active-link">HOME</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">ABOUT</a></li>
                         <li class="nav__item"><a href="#services" class="nav__link">SERVICES</a></li>
                         <li class="nav__item"><a href="#portfolio" class="nav__link">PORTFOLIO</a></li>
@@ -58,24 +58,26 @@
                 </div>
                 <script>
                     const text = document.querySelector(".sec-text");
+
                     const textLoad = () => {
-                        setTimeout(() =>{
-                            text.textContent = " Web Developer";
-                        }, 0);
-                        setTimeout(() =>{
-                            text.textContent = " Software Developer";
-                        }, 4000);
-                        setTimeout(() =>{
-                            text.textContent = " AI Developer";
-                        }, 8000);
+                        const textValues = ["Web Developer", "Software Developer", "AI Developer"];
+                        let currentIndex = 0;
+
+                        const changeText = () => {
+                            text.textContent = textValues[currentIndex];
+                            currentIndex = (currentIndex + 1) % textValues.length; // Increment index, loop back to 0 when reaching the end
+                            setTimeout(changeText, 4000); // Repeat after 4 seconds
+                        };
+
+                        changeText(); // Start the text change loop
                     }
 
                     textLoad();
                 </script>
                 <div class="home__social">
-                    <a href="#" class="home__social-icon"><i class='bx bxl-facebook-square' ></i></a>
-                    <a href="#" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
-                    <a href="#" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.facebook.com/share/dVG9d9QeUgAXQQA2/?mibextid=LQQJ4d" class="home__social-icon"><i class='bx bxl-facebook-square' ></i></a>
+                    <a href="https://www.instagram.com/tommasgonz_/" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://wa.me/91991716770" class="home__social-icon"><i class='bx bxl-whatsapp' ></i></a>
                 </div>
                 <div class="home__img">
                     <img src="img/DSC_0342 (1).png" alt="">
@@ -90,7 +92,9 @@
 
             <div class="about__container bd-grid">
                 <div class="about__data bd-grid">
-                    <p class="about__description"><span>Hello, I am <br>Tomas Gonzalez</span></p>
+                    <p class="about__description"><span>Hello, I am <br>Tomas Gonzalez Hello, a computer science enthusiast proficient in C/C++, Python, MySQL, and HTML
+                        with a passion for software engineering and web development.
+                        Outside of coding, I enjoy hitting the gym for workouts and driving a voxy on the road.</span></p>
 
                     <div>
                         <span class="about__number">1</span>
@@ -230,19 +234,16 @@
                     <i class='bx bxl-c-plus-plus services__icon' ></i>
                     <h3 class="services__title">Software Developer</h3>
                     <p class="services__description">Skilled software developer crafting custom solutions for your needs. </p>
-                    <a href="#" class="button button-link">Know More</a>
                 </div>                
                 <div class="services__data">
                     <i class='bx bx-laptop services__icon' ></i>
                     <h3 class="services__title">Web development</h3>
                     <p class="services__description">I bring your web presence to life with precision and creativity. Let's build your digital footprint together</p>
-                    <a href="#" class="button button-link">Know More</a>
                 </div>                
                 <div class="services__data">
                     <i class='bx bxl-python services__icon'></i>
                     <h3 class="services__title">IA Developer</h3>
                     <p class="services__description">Innovative AI developer transforming ideas into intelligent solutions</p>
-                    <a href="#" class="button button-link">Know More</a>
                 </div>
             </div>
         </section>
@@ -261,60 +262,54 @@
             </div>
 
             <div class="portfolio__container bd-grid">
-                <div class="portfolio__content mix web">
-                    <a href="#"><img src="img/tictactoeToma.png" alt="" class="portfolio__img"></a>
+                <div class="portfolio__content mix app">
+                    <img src="img/tictactoeToma.png" alt="" class="portfolio__img">
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">C++ development</span>
-                        <a href="#"><h2 class="portfolio__title">TIC TAC TOE GAME</h2></a>
-                        <a href="#" class="button button-link ">View Details</a>
+                        <h2 class="portfolio__title">TIC TAC TOE GAME</h2>
                     </div>
                 </div>
 
 
                 <div class="portfolio__content mix web">
-                    <a href="#"><img src="img/Blue and Yellow Gradient Modern Desktop Wallpaper (4).png" alt="" class="portfolio__img"></a>
+                    <img src="img/Blue and Yellow Gradient Modern Desktop Wallpaper (4).png" alt="" class="portfolio__img">
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Web Development</span>
-                        <a href="#"><h2 class="portfolio__title">Portfolio Web Page</h2></a>
-                        <a href="#" class="button button-link ">View Details</a>
+                        <h2 class="portfolio__title">Portfolio Web Page</h2>
                     </div>
                 </div>
 
 
                 <div class="portfolio__content mix ux">
-                    <a href="#"><img src="img/tomaDos.png" alt="" class="portfolio__img"></a>
+                    <img src="img/tomaDos.png" alt="" class="portfolio__img">
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">IA Developer</span>
-                        <a href="#"><h2 class="portfolio__title">AttacK DoS</h2></a>
-                        <a href="#" class="button button-link">View Details</a>
+                        <h2 class="portfolio__title">AttacK DoS</h2>
                     </div>
                 </div>
 
 
                 <div class="portfolio__content mix ux">
-                    <a href="#"><img src="img/tomanetwork copy.png" alt="" class="portfolio__img"></a>
+                    <img src="img/tomanetwork copy.png" alt="" class="portfolio__img">
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Networking</span>
-                        <a href="#"><h2 class="portfolio__title">Subnet Network With Pucket Tracer</h2></a>
-                        <a href="#" class="button button-link">View Details</a>
+                        <h2 class="portfolio__title">Subnet Network With Pucket Tracer</h2>
                     </div>
                 </div>
 
-                <div class="portfolio__content mix app">
-                    <a href="#"><img src="img/how-to-bench-press.jpg" alt="" class="portfolio__img"></a>
+                <div class="portfolio__content mix web">
+                    <img src="img/how-to-bench-press.jpg" alt="" class="portfolio__img">
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Gym Coach</span>
-                        <a href="#"><h2 class="portfolio__title">Rutine to be Massive</h2></a>
-                        <a href="#" class="button button-link">View Details</a>
+                        <h2 class="portfolio__title">Rutine to be Massive</h2>
                     </div>
                 </div>
 
-                <div class="portfolio__content mix app">
+                <div class="portfolio__content mix web">
                     <a href="#"><img src="img/voxybb.jpeg" alt="" class="portfolio__img"></a>
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Test Driving</span>
                         <a href="#"><h2 class="portfolio__title">Drivig like a Pro</h2></a>
-                        <a href="#" class="button button-link">View Details</a>
                     </div>
                 </div>
             </div>
@@ -351,7 +346,7 @@
                         <span class="contact__description">tomasgonzalezuptp@gmail.com</span>
                     </div>
                 </div>
-                <form action="" class="contact__form">
+                <form action="https://formsubmit.co/433solutions@gmail.com" method="POST" class="contact__form">
                     <div class="contact__inputs">
                         <input type="text" placeholder = "Name" class="contact__input">
                         <input type="email" placeholder = "Email" class="contact__input">
@@ -379,13 +374,7 @@
                 <h1 class="footer__title">Tomas Gonzalez</h1>
                 <p class="footer__description"></p>
 
-                <div class="footer__social">
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
-
-                </div>
-                <p class="footer__copy">&#169; 433</p>
+                <p class="footer__copy">&#169; All rights reserved. Total views: <span id="view-count">Loading...</span></p>
             </div>
         </footer>
 
@@ -399,5 +388,7 @@
 
         <!--JS-->
         <SCRIpt src="js/main.js"></SCRIpt>
+
+        <script src = "js/viewcountscript.js"></script>
     </body>
 </html>

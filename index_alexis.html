@@ -25,12 +25,12 @@
         <!--HEADER-->
         <header class="l-header" id="header">
             <nav class="nav bd-container">
-                <a href="#" class="nav__logo">Clay Doe</a>
+                <a href="#" class="nav__logo"> Alexis Colman</a>
 
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="main.html" class="nav__link active-link">HOME</a></li>
+                        <li class="nav__item"><a href="index.html" class="nav__link active-link">HOME</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">ABOUT</a></li>
                         <li class="nav__item"><a href="#services" class="nav__link">SERVICES</a></li>
                         <li class="nav__item"><a href="#portfolio" class="nav__link">PORTFOLIO</a></li>
@@ -54,32 +54,33 @@
                         <span class="text first-text"> I'm a</span>
                         <span class="text sec-text">Database Analyst</span>
                     </div>
-                    <a download="" href="pdf/CV_f11215124.pdf" class="button button-light">Download CV</a>
+                    <a download="" href="cv/CV_AlexisColman.pdf" class="button button-light">Download CV</a>
                 </div>
                 <script>
                     const text = document.querySelector(".sec-text");
+
                     const textLoad = () => {
-                        setTimeout(() =>{
-                            text.textContent = " Database Analyst";
-                        }, 0);
-                        setTimeout(() =>{
-                            text.textContent = "Network Developer";
-                        }, 4000);
-                        setTimeout(() =>{
-                            text.textContent = "Mobile Apps Developer";
-                        }, 8000);
+                        const textValues = ["Network Developer", "Database Analyst", "Mobile Apps Developer"];
+                        let currentIndex = 0;
+
+                        const changeText = () => {
+                            text.textContent = textValues[currentIndex];
+                            currentIndex = (currentIndex + 1) % textValues.length; // Increment index, loop back to 0 when reaching the end
+                            setTimeout(changeText, 4000); // Repeat after 4 seconds
+                        };
+
+                        changeText(); // Start the text change loop
                     }
 
                     textLoad();
                 </script>
                 <div class="home__social">
-                    <a href="#" class="home__social-icon"><i class='bx bxl-facebook-square' ></i></a>
-                    <a href="#" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
-                    <a href="#" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100082901616453" class="home__social-icon"><i class='bx bxl-facebook-square' ></i></a>
+                    <a href="https://www.instagram.com/zt.lxs_/" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
                 </div>
             </div>
             <div class="home__img">
-                <img src="alexis.png" alt="">
+                <img src="images/alexis.png" alt="" style="margin: 125px;">
             </div>
         </section>
 
@@ -107,7 +108,7 @@
                         <span class="about__achievements">Best work awards</span>
                     </div>
                 </div>
-                <img src="alexis2.jpeg" alt="" class="about__img">
+                <img src="images/alexis2.jpeg" alt="" class="about__img">
             </div>
         </section>
 
@@ -222,27 +223,24 @@
 
         <!--SERVICES-->
         <section class="services section bd-container" id="services">
-            <span class="section-subtitle">What i offer</span>
+            <span class="section-subtitle">What I offer</span>
             <h2 class="section-title">Services</h2>        
 
             <div class="services__container bd-grid">
                 <div class="services__data">
-                    <i class='bx bx-palette services__icon' ></i>
+                    <i class='bx bx-laptop services__icon'></i>
                     <h3 class="services__title">Networking Solutions</h3>
                     <p class="services__description">Unlock seamless connectivity and enhance your network infrastructure with my comprehensive networking solutions. From setting up robust Wi-Fi networks to optimizing LAN/WAN configurations, I provide tailored solutions to meet your business needs. With my capabilities you can ensure smooth operations, security enhancements, and scalability, empowering your business to thrive in today's digital landscape.</p>
-                    <a href="#" class="button button-link">Know More</a>
                 </div>                
                 <div class="services__data">
-                    <i class='bx bx-laptop services__icon' ></i>
+                    <i class='bx bx-link services__icon' ></i>
                     <h3 class="services__title">Database Design/Developer</h3>
                     <p class="services__description">I specialize in database solutions tailored to your specific business needs. From designing efficient database architectures to optimizing performance and ensuring data security, I am committed to delivering reliable and scalable solutions. Whether you require database migration, maintenance, or troubleshooting, I provide personalized expertise to streamline your data management processes. Let me help you unlock the full potential of your data infrastructure, ensuring seamless operations and empowering your business growth.</p>
-                    <a href="#" class="button button-link">Know More</a>
                 </div>                
                 <div class="services__data">
-                    <i class='bx bx-pen services__icon' ></i>
+                    <i class='bx bx-phone services__icon' ></i>
                     <h3 class="services__title">Mobile Apps Developing</h3>
                     <p class="services__description">As a mobile app developer, I bring your ideas to life with intuitive and engaging applications crafted for various platforms. From concept to deployment, I am dedicated to creating user-centric experiences that resonate with your audience. Whether it's Android, iOS, or cross-platform development, I leverage cutting-edge technologies to build robust and scalable solutions. Whether you need a standalone app or integration with existing systems, I ensure seamless functionality and captivating design. Let's collaborate to turn your vision into a reality and make your app stand out in the competitive market.</p>
-                    <a href="#" class="button button-link">Know More</a>
                 </div>
             </div>
         </section>
@@ -262,59 +260,52 @@
 
             <div class="portfolio__container bd-grid">
                 <div class="portfolio__content mix web">
-                    <a href="#"><img src="cisco.jpg" width="200" height="150" alt="" class="portfolio__img"></a>
+                    <a href="#"><img src="img/cisco.png" alt="" class="portfolio__img"></a>
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Network</span>
                         <a href="#"><h2 class="portfolio__title">Subnetting Network with OSPF Dynamic Routing and Application Layer Services in Cisco Packet Tracer </h2></a>
-                        <a href="#" class="button button-link ">View Details</a>
                     </div>
                 </div>
-
 
                 <div class="portfolio__content mix web">
-                    <a href="#"><img src="siscotec.jpg" width="200" height="150" alt="" class="portfolio__img"></a>
-                    <div class="portfolio__data">
-                        <span class="portfolio__subtitle">Database</span>
-                        <a href="#"><h2 class="portfolio__title">Design of a personalized Database for SISCOTEC</h2></a>
-                        <a href="#" class="button button-link ">View Details</a>
-                    </div>
-                </div>
-
-
-                <div class="portfolio__content mix ux">
-                    <a href="#"><img src="mit.png" width="200" height="150" alt="" class="portfolio__img"></a>
-                    <div class="portfolio__data">
-                        <span class="portfolio__subtitle">App Development</span>
-                        <a href="#"><h2 class="portfolio__title">App Design and Development using MIT App Inventor</h2></a>
-                        <a href="#" class="button button-link">View Details</a>
-                    </div>
-                </div>
-
-
-                <div class="portfolio__content mix ux">
-                    <a href="#"><img src="holding.jpg" width="200" height="150" alt="" class="portfolio__img"></a>
+                    <a href="#"><img src="img/holding.jpg" alt="" class="portfolio__img"></a>
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Network</span>
                         <a href="#"><h2 class="portfolio__title">Structured Network Cabling for Holding Tech Company.</h2></a>
-                        <a href="#" class="button button-link">View Details</a>
                     </div>
                 </div>
 
-                <div class="portfolio__content mix app">
-                    <a href="#"><img src="conatel.png" width="200" height="150" alt="" class="portfolio__img"></a>
+                <div class="portfolio__content mix ux">
+                    <a href="#"><img src="img/conatel.jpg" alt="" class="portfolio__img"></a>
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Database</span>
                         <a href="#"><h2 class="portfolio__title">Optimization of an existing database for CONATEL</h2></a>
-                        <a href="#" class="button button-link">View Details</a>
+                    </div>
+                </div>
+
+
+                <div class="portfolio__content mix ux">
+                    <a href="#"><img src="img/siscotec.png" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">Database</span>
+                        <a href="#"><h2 class="portfolio__title">Design of a personalized Database for SISCOTEC</h2></a>
+                    </div>
+                </div>
+
+
+                <div class="portfolio__content mix app">
+                    <a href="#"><img src="img/mit.png" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">App Development</span>
+                        <a href="#"><h2 class="portfolio__title">App Design and Development using MIT App Inventor</h2></a>
                     </div>
                 </div>
 
                 <div class="portfolio__content mix app">
-                    <a href="#"><img src="ulearn.png" width="200" height="150" alt="" class="portfolio__img"></a>
+                    <a href="#"><img src="img/ulearn.png" alt="" class="portfolio__img"></a>
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">App Development</span>
                         <a href="#"><h2 class="portfolio__title">Application Version of Ulearn App made by Paraguayans</h2></a>
-                        <a href="#" class="button button-link">View Details</a>
                     </div>
                 </div>
             </div>
@@ -377,15 +368,8 @@
         <footer class="footer">
             <div class="footer__container bd-container">
                 <h1 class="footer__title">Alexis Colman</h1>
-                <p class="footer__description">NTUST  Student.</p>
-
-                <div class="footer__social">
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
-
-                </div>
-                <p class="footer__copy">&#169; NTUST</p>
+                <p class="footer__description">433 Solutions</p>
+                <p class="footer__copy">&#169; All rights reserved. Total views: <span id="view-count">Loading...</span></p>
             </div>
         </footer>
 
@@ -399,5 +383,7 @@
 
         <!--JS-->
         <SCRIpt src="js/main.js"></SCRIpt>
+
+        <script src = "js/viewcountscript.js"></script>
     </body>
 </html>

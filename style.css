@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 
 *{
     margin: 0;
@@ -74,6 +76,7 @@ nav{
     color: #171C36;
     border-radius: 25px;
     background-color: #fff;
+    min-height: 60vh;
 }
 
 
@@ -213,7 +216,7 @@ section:nth-child(5){
 }
 
 section .container{
-    margin: 100px;  
+    margin: 100px; 
 }
 
 section h0{
@@ -342,6 +345,11 @@ section .cards{
     background-color: #B9BAC0;
 }
 
+
+.logo {
+    border-radius: 50%; 
+
+}
 .hero-btn{
     display: inline-block;
     text-decoration: none;
@@ -366,8 +374,8 @@ nav .fa{
 
 
 footer {
-    background-color: #191a2b;
-    color: #fff;
+    background-color: #212950;
+    color: #ffffff;
     padding: 20px;
     text-align: center;
     font-size: 15px;
@@ -375,12 +383,20 @@ footer {
 
 .footer-content {
     height: 35px;
+    color: white;
     max-width: 800px;
     margin: 0 auto;
 }
+.footer__copy {
+    color: #ffffff; /* Replace #FF0000 with the color code you want */
+}
 
+.footer__container bd-container{
+    color: #14471c;
+}
 .footer-content p {
     margin-bottom: 10px;
+    color: #949494;
 }
 
 /* Styling for the SoundCloud player */
@@ -406,6 +422,75 @@ footer {
 .contact-col .contact-us .contact-col div span iframe .soundcloud-player .waveform {
     display: none; /* Hide the waveform */
 }
+
+/* Styles for nav-links-home class */
+.nav-links-home {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links-home li {
+    margin-right: 20px;
+}
+
+.nav-links-home li:last-child {
+    margin-right: 0;
+}
+
+.nav-links-home a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links-home a:hover {
+    color: #fff; /* Change to desired hover color */
+}
+
+/* Styles for home-btns class */
+.home-btns {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.home-btns ul {
+    list-style: none;
+    margin: 50px;
+    padding: 0;
+    display: flex;
+}
+
+.home-btns li {
+    margin-right: 20px;
+}
+
+.home-btns li:last-child {
+    margin-right: 0;
+}
+
+.home-btns a {
+    text-decoration: none;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.home-btns a:hover {
+    background-color: #786ea0; /* Change to desired hover color */
+}
+
 
 
 .text-box
@@ -487,10 +572,9 @@ footer {
         gap: 30px;
         margin-top: 50px;
     }
-    
     .card2{
         height: 350px;
-        width: 250px;
+        width: 330px;
         /* This change the color of the background of each box of service*/
         background-color: #5E567D;
         padding: 3% 8%;
@@ -532,9 +616,10 @@ footer {
         font-size: 5rem;
     }
     
+
     .card2 h2{
         color:#B9BAC0;
-        font-size: 20px;
+        font-size: 22px;
         font-weight: 600;
         letter-spacing: 1px;
         align-items: center;
@@ -542,7 +627,7 @@ footer {
     }
     
     .card2 p{
-        font-size: 15px;
+        font-size: 17px;
         text-align: center;
         width: 100%;
         margin: 12px 0;
@@ -573,8 +658,40 @@ footer {
         .text-box1 h1{
             font-size: 20px;
         }
+        
         .nav-links li{
             display: block;
+        }
+        /* Styles for nav-links-home class */
+        .nav-links-home {
+            flex-direction: column;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links-home li {
+            position:relative;
+            margin-right: 20px;
+            padding:15px;
+        }
+
+        .nav-links-home li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-links-home a {
+            
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links-home a:hover {
+            color: #fff; /* Change to desired hover color */
         }
         .nav-links{
             position: fixed;
@@ -735,7 +852,7 @@ footer {
 .location {
     margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
     margin-top: 30px;
-    width: 70%;
+    width: 80%;
     margin-left: auto; /* Centra horizontalmente el elemento */
     margin-right: auto; /* Centra horizontalmente el elemento */
     height: 20x;
@@ -854,9 +971,6 @@ footer {
     color: #C0C0C0;
 
 }
-
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
 /* For screens smaller than 700px */
 @media screen and (max-width: 700px) {

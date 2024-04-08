@@ -25,7 +25,7 @@
         <!--HEADER-->
         <header class="l-header" id="header">
             <nav class="nav bd-container">
-                <a href="#" class="nav__logo">Clay Doe</a>
+                <a href="#" class="nav__logo">Alex Stockel</a>
 
 
                 <div class="nav__menu" id="nav-menu">
@@ -57,23 +57,19 @@
                     <a download="" href="pdf/CV - Alex Stockel.pdf" class="button button-light">Download CV</a>
                 </div>
                 <script>
-                    const text = document.querySelector(".sec-text");
+                    const text = document.querySelector(".sec-textS");
+
                     const textLoad = () => {
-                        setTimeout(() =>{
-                            text.textContent = " Web Developer";
-                        }, 0);
-                        setTimeout(() =>{
-                            text.textContent = " Software Developer";
-                        }, 4000);
-                        setTimeout(() =>{
-                            text.textContent = " AI Developer";
-                        }, 8000);
-                        setTimeout(() =>{
-                            text.textContent = " Graphic Designer ";
-                        }, 8000);
-                        setTimeout(() =>{
-                            text.textContent = " Front-End Developer ";
-                        }, 8000);
+                        const textValues = ["Front-End Developer", , "AI Developer", "Graphic Designer"];
+                        let currentIndex = 0;
+
+                        const changeText = () => {
+                            text.textContent = textValues[currentIndex];
+                            currentIndex = (currentIndex + 1) % textValues.length; // Increment index, loop back to 0 when reaching the end
+                            setTimeout(changeText, 4000); // Repeat after 4 seconds
+                        };
+
+                        changeText(); // Start the text change loop
                     }
 
                     textLoad();
@@ -82,6 +78,10 @@
                     <a href="https://api.whatsapp.com/send/?phone=595982521594" class="home__social-icon"><i class='bx bxl-whatsapp' ></i></a>
                     <a href="https://www.instagram.com/alexstockeldu/" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
                     <a href="https://twitter.com/StockelAlex01" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                </div>
+
+                <div class="home__img">
+                    <img src="img/fondoalex.png" alt="">
                 </div>
             </div>
         </section>
@@ -96,21 +96,21 @@
                     <p class="about__description"><span>Hello, I am  Alex, a highly<br>accomplished Information Engineering student with a robust academic background, including an exchange program at National Taiwan University of Science and Technology. Proven leadership as General Secretary of the Polytechnic University Taiwan Paraguay's Students Council and dedicated volunteer with a strong sense of community involvement. Proficient in multiple languages and skilled in programming, with a passion for science and technology.</span></p>
 
                     <div>
-                        <span class="about__number">05</span>
-                        <span class="about__achievements">Years off Experience</span>
+                        <span class="about__number">1</span>
+                        <span class="about__achievements">Year off Experience</span>
                     </div>
 
                     <div>
-                        <span class="about__number">5+</span>
-                        <span class="about__achievements">Projects completed</span>
+                        <span class="about__number">10+</span>
+                        <span class="about__achievements">Science competitions</span>
                     </div>
 
                     <div>
-                        <span class="about__number">3</span>
-                        <span class="about__achievements">Best work awards</span>
+                        <span class="about__number">7</span>
+                        <span class="about__achievements">Honorific Mentions</span>
                     </div>
                 </div>
-                <img src="img/fondoalex.png" alt="" class="about__img">
+                <img src="img/fondoalesx2.jpeg" alt="" class="about__img">
             </div>
         </section>
 
@@ -242,7 +242,7 @@
                 <div class="services__data">
                     <i class='bx bx-pen services__icon' ></i>
                     <h3 class="services__title">Graphic Design</h3>
-                    <p class="services__description">"Creative Graphic Designer with a keen eye for detail and a flair for visual storytelling. Proficient in Adobe Photoshop and skilled in creating captivating designs that communicate effectively and leave a lasting impact</p>
+                    <p class="services__description">Creative Graphic Designer with a keen eye for detail and a flair for visual storytelling. Proficient in Adobe Photoshop and skilled in creating captivating designs that communicate effectively and leave a lasting impact</p>
                     <!-- <a href="#" class="button button-link">Know More</a> -->
                 </div>
             </div>
@@ -256,23 +256,23 @@
             
             <div class="portfolio__nav">
                 <span class="portfolio__item active-portfolio" data-filter="all">All</span>
-                <span class="portfolio__item" data-filter=".web">Web</span>
-                <span class="portfolio__item" data-filter=".ux">Ui/Ux</span>
-                <span class="portfolio__item" data-filter=".app">App</span>
+                <span class="portfolio__item" data-filter=".app">Sofware Development</span>
+                <span class="portfolio__item" data-filter=".Web">Website Development</span>
+                <span class="portfolio__item" data-filter=".AI">AI Model Development</span>
             </div>
 
             <div class="portfolio__container bd-grid">
-                <div class="portfolio__content mix web">
+                <div class="portfolio__content mix AI">
                     <a href="#"><img src="img/datos.png" alt="" class="portfolio__img"></a>
                     <div class="portfolio__data">
-                        <span class="portfolio__subtitle">Software Development</span>
+                        <span class="portfolio__subtitle">AI Model Development</span>
                         <a href="#"><h2 class="portfolio__title">DOS Attack Detection using AI</h2></a>
                         <a href="#" class="button button-link ">Implemented a robust DOS Attack Detection system using AI algorithms in Python, leveraging machine learning models to analyze network traffic patterns. </a>
                     </div>
                 </div>
 
 
-                <div class="portfolio__content mix web">
+                <div class="portfolio__content mix Web">
                     <a href="#"><img src="img/Screenshot 2024-04-06 233749.png" alt="" class="portfolio__img"></a>
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Website Development</span>
@@ -282,12 +282,36 @@
                 </div>
 
 
-                <div class="portfolio__content mix ux">
+                <div class="portfolio__content mix app">
                     <a href="#"><img src="img/Screenshot 2024-04-06 234236.png" alt="" class="portfolio__img"></a>
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Sofware Development</span>
                         <a href="#"><h2 class="portfolio__title">Subneting Network in Cisco Packet Tracer</h2></a>
                         <a href="#" class="button button-link">Designed and implemented a robust network subnetting solution using Cisco Packet Tracer. Utilized subnetting techniques to efficiently allocate IP addresses, optimize network performance, and ensure seamless communication across subnetworks.</a>
+                    </div>
+                </div>
+                <div class="portfolio__content mix app">
+                    <a href="#"><img src="img/Screenshot 2024-04-08 234434.png" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">Sofware Development</span>
+                        <a href="#"><h2 class="portfolio__title">To-Do List app</h2></a>
+                        <a href="#" class="button button-link">A To-Do List program in C++ allows users to manage tasks efficiently. It includes features like adding tasks with descriptions and due dates, marking tasks as completed, and others</a>
+                    </div>
+                </div>
+                <div class="portfolio__content mix app">
+                    <a href="#"><img src="img/Screenshot 2024-04-08 234805.png" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">Sofware Development</span>
+                        <a href="#"><h2 class="portfolio__title">Contact Book app</h2></a>
+                        <a href="#" class="button button-link">Developed a Contact Book application in C++ with intuitive functionalities including adding new contacts, deleting existing ones, and search contacts by their name or number</a>
+                    </div>
+                </div>
+                <div class="portfolio__content mix">
+                    <a href="#"><img src="img/Screenshot 2024-04-08 235100.png" alt="" class="portfolio__img"></a>
+                    <div class="portfolio__data">
+                        <span class="portfolio__subtitle">Graphic Designer</span>
+                        <a href="#"><h2 class="portfolio__title">Merchandising Design using Photoshop</h2></a>
+                        <a href="#" class="button button-link">Led the official merchandising efforts for the UPTP Students' Committee, orchestrating the design using sofwares like Phothoshop and Canva </a>
                     </div>
                 </div>
         </section>
@@ -306,7 +330,7 @@
 
                         <i class='bx bx-home contact__icon'></i>
                         <h3 class="contact__title">Location</h3>
-                        <span class="contact__description">No. 43號, Section 4, Keelung Rd, Da’an District, Taipei City, 106</span>
+                        <span class="contact__description">No. 43, Section 4, Keelung Rd, Da’an District, Taipei City, 106</span>
                     </div>
 
                     <div class="contact__box">
@@ -349,15 +373,7 @@
             <div class="footer__container bd-container">
                 <h1 class="footer__title">433Solutions</h1>
                 <p class="footer__description">433solutions@gmail.com</p>
-
-                <div class="footer__social">
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
-
-                </div>
-                <p class="footer__copy">&#169;Rights Reserved</p>
-            </div>
+                <p class="footer__copy">&#169; All rights reserved. Total views: <span id="view-count">Loading...</span></p>            </div>
         </footer>
 
         <!--MIXTUP FILTER-->
@@ -370,5 +386,6 @@
 
         <!--JS-->
         <SCRIpt src="js/main.js"></SCRIpt>
+        <script src = "js/viewcountscript.js"></script>
     </body>
 </html>

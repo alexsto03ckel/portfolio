@@ -54,19 +54,21 @@
                         <span class="text first-text"> I'm a</span>
                         <span class="text sec-text">Web Developer</span>
                     </div>
-                    <a download="" href="pdf/CV_f11215124.pdf" class="button button-light">Download CV</a>
+                    <a download="" href="cv/CurriculumVitae - FabrizioCaceres.pdf" class="button button-light">Download CV</a>
                     <script>
                         const text = document.querySelector(".sec-text");
+
                         const textLoad = () => {
-                            setTimeout(() =>{
-                                text.textContent = " Web Developer";
-                            }, 0);
-                            setTimeout(() =>{
-                                text.textContent = " Software Developer";
-                            }, 4000);
-                            setTimeout(() =>{
-                                text.textContent = " AI Developer";
-                            }, 8000);
+                            const textValues = ["Web Developer", "Software Developer", "AI Developer", "Audio Engineer"];
+                            let currentIndex = 0;
+
+                            const changeText = () => {
+                                text.textContent = textValues[currentIndex];
+                                currentIndex = (currentIndex + 1) % textValues.length; // Increment index, loop back to 0 when reaching the end
+                                setTimeout(changeText, 4000); // Repeat after 4 seconds
+                            };
+
+                            changeText(); // Start the text change loop
                         }
 
                         textLoad();
@@ -74,9 +76,9 @@
                 </div>
 
                 <div class="home__social">
-                    <a href="#" class="home__social-icon"><i class='bx bxl-facebook-square' ></i></a>
-                    <a href="#" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
-                    <a href="#" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
+                    <a href="https://api.whatsapp.com/send/?phone=886963647190" class="home__social-icon"><i class='bx bxl-whatsapp' ></i></a>
+                    <a href="https://www.instagram.com/llamosass_/" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://twitter.com/fabrilocore" class="home__social-icon"><i class='bx bxl-twitter' ></i></a>
                 </div>
             </div>
         </section>
@@ -105,7 +107,7 @@
                         <span class="about__achievements">Best work awards</span>
                     </div>
                 </div>
-                <img src="img/perro de mierda.jpeg" alt="" class="about__img">
+                <img src="img/F11215108 - FabrizioCaceres.png" alt="" class="about__img">
             </div>
         </section>
 
@@ -225,22 +227,22 @@
 
             <div class="services__container bd-grid">
                 <div class="services__data">
-                    <i class='bx bx-palette services__icon' ></i>
+                    <i class='bx bxl-python services__icon'></i>
                     <h3 class="services__title">AI Development</h3>
                     <p class="services__description"> LLM Model Training and Development, GPT Research, Computer Vision</p>
-                    <a href="#" class="button button-link">Know More</a>
+                
                 </div>                
                 <div class="services__data">
-                    <i class='bx bx-;aptop services__icon' ></i>
+                    <i class='bx bx-laptop services__icon' ></i>
                     <h3 class="services__title">Web Development</h3>
                     <p class="services__description">Frontend Development, UI Design</p>
-                    <a href="#" class="button button-link">Know More</a>
+                    
                 </div>                
                 <div class="services__data">
-                    <i class='bx bx-pen services__icon' ></i>
+                    <i class='bx bx-album services__icon' ></i>
                     <h3 class="services__title">Audio Engineering</h3>
                     <p class="services__description">Signal Processing, Mastering, Mixing</p>
-                    <a href="#" class="button button-link">Know More</a>
+                   
                 </div>
             </div>
         </section>
@@ -260,49 +262,36 @@
 
             <div class="portfolio__container bd-grid">
                 <div class="portfolio__content mix web">
-                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <img src="img/Conceptual-architecture-of-a-GPT-model.png" alt="" class="portfolio__img">
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">AI</span>
-                        <a href="#"><h2 class="portfolio__title">Large Language Model based on Transformers: ChatIPT</h2></a>
-                        <a href="#" class="button button-link ">View Details</a>
+                        <h2 class="portfolio__title">Large Language Model based on Transformers: ChatIPT</h2>
                     </div>
                 </div>
 
 
                 <div class="portfolio__content mix web">
-                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <img src="img/Ukraine-Game-Changer-AI-Driven-Drones-in-Battle.jpg" alt="" class="portfolio__img">
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">AI</span>
-                        <a href="#"><h2 class="portfolio__title">AI Driven Drone</h2></a>
-                        <a href="#" class="button button-link ">View Details</a>
+                        <h2 class="portfolio__title">AI Driven Drone</h2>
                     </div>
                 </div>
 
 
                 <div class="portfolio__content mix ux">
-                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
+                    <img src="img/Screenshot 2024-04-08 185333.png" alt="" class="portfolio__img">
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Web Development</span>
-                        <a href="#"><h2 class="portfolio__title">ECommerce Portfolio</h2></a>
-                        <a href="#" class="button button-link">View Details</a>
-                    </div>
-                </div>
-
-
-                <div class="portfolio__content mix ux">
-                    <a href="#"><img src="img/perro de mierda.jpeg" alt="" class="portfolio__img"></a>
-                    <div class="portfolio__data">
-                        <span class="portfolio__subtitle">Web Development</span>
-                        <a href="#"><h2 class="portfolio__title">ECommerce Website</h2></a>
-                        <a href="#" class="button button-link">View Details</a>
+                        <h2 class="portfolio__title">ECommerce Website</h2>
                     </div>
                 </div>
 
                 <div class="portfolio__content mix app">
-                    <a href="#"><img src="img/rauw.jpg" alt="" class="portfolio__img"></a>
+                    <a href="https://soundcloud.com/lywx/where-she-goes-rauw-alejandro?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"><img src="img/rauw.jpg" alt="" class="portfolio__img"></a>
                     <div class="portfolio__data">
                         <span class="portfolio__subtitle">Audio</span>
-                        <a href="https://soundcloud.com/lywx/where-she-goes-rauw-alejandro?si=d7308db2feea45bc906d1f08ad698b0e&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"><h2 class="portfolio__title">Where She Goes - Rauw Alejandro (Producer, Composer, Writer)</h2></a>
+                        <a href="https://soundcloud.com/lywx/where-she-goes-rauw-alejandro?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"><h2 class="portfolio__title">Where She Goes - Rauw Alejandro (Producer, Composer, Writer)</h2></a>
                         <a href="https://soundcloud.com/lywx/where-she-goes-rauw-alejandro?si=d7308db2feea45bc906d1f08ad698b0e&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" class="button button-link">View Details</a>
                     </div>
                 </div>
@@ -348,7 +337,7 @@
                         <span class="contact__description">fabriziollamosas@outlook.com</span>
                     </div>
                 </div>
-                <form action="" class="contact__form">
+                <form action="https://formsubmit.co/433solutions@gmail.com" method="POST" class="contact__form">
                     <div class="contact__inputs">
                         <input type="text" placeholder = "Name" class="contact__input">
                         <input type="email" placeholder = "Email" class="contact__input">
@@ -375,14 +364,10 @@
             <div class="footer__container bd-container">
                 <h1 class="footer__title">Fabrizio Caceres</h1>
                 <p class="footer__description">433 Solutions</p>
-
                 <div class="footer__social">
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
-                    <a href="#" class="footer__link"><i class='bx bx-link' ></i></a>
 
                 </div>
-                <p class="footer__copy">&#169; Pilin</p>
+                <p class="footer__copy">&#169; All rights reserved. Total views: <span id="view-count">Loading...</span></p>
             </div>
         </footer>
 
@@ -396,5 +381,7 @@
 
         <!--JS-->
         <SCRIpt src="js/main.js"></SCRIpt>
+
+        <script src = "js/viewcountscript.js"></script>
     </body>
 </html>
